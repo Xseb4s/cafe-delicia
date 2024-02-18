@@ -12,7 +12,7 @@ const Start = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           className="transition-all duration-900 ease-in-out delay-500">
-            <figure className="w-full relative z-0 overflow-hidden brightness-50 saturate-150" style={{height:"110vh"}}>
+            <figure className="w-full relative z-0 overflow-hidden brightness-50 saturate-150 h-[110vh] ">
                 <Image
                 src="/hero-background.webp"
                 alt="Background"             

@@ -3,7 +3,7 @@ import { motion, useAnimation } from "framer-motion";
 import React, { useEffect, useState } from "react";
 
 const Burger = ({ children }: {children: React.ReactNode}) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   
   const ulControls = useAnimation();
 
@@ -18,14 +18,14 @@ const Burger = ({ children }: {children: React.ReactNode}) => {
   return (
     <motion.div
         animate={isOpen ? "open" : "closed"}
-        className="relative"
+        className="relative z-50"
         >
           <Bars3Icon
             className="size-10"
             onClick={() => setIsOpen(!isOpen)}
             />
           <motion.ul
-            className="absolute -ml-5 backdrop-blur-md bg-black/50 rounded-lg p-2 border z-30"
+            className="absolute -ml-5 backdrop-blur-md bg-black/50 rounded-lg p-2 z-50 border"
             initial={{ y: "-300px" }}
             animate={ulControls}
             >

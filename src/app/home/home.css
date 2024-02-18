@@ -21,7 +21,9 @@
     height: 800px;
 }
 @media (max-width:1250px) {
-    
+    .img-size{
+        height: 500px;
+    }
     .bottom-cutom-home{
         bottom:65px;
     }
@@ -50,7 +52,7 @@
         width: 100%;
     }
     .img-size{
-        width: 400px;
+        width: 90%;
         height: 400px;
     }
     .icons-size-custom{

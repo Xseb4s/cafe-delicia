@@ -47,9 +47,11 @@ const Navbar = () => {
                     <figcaption className="ml-2 flex items-center font-semibold">caf&eacute;<span className="comforter-brush-regular mt-1">delicia</span></figcaption>
                 </figure>
                 {barIcon ? (
+                  <div className="relative z-50">
                     <Burger>
                         {List(true)}
                     </Burger>
+                  </div>
                 ) : (
                     <ul className="hidden sm:flex gap-4 z-20 relative text-sm">
                         {List(true)}
