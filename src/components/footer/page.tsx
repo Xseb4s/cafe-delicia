@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image';
-import { list } from '../navbar/page';
+import List from '../navbar/list';
 import { FaFacebook, FaInstagram, FaLinkedin, FaSpotify } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import Link from 'next/link';
@@ -40,7 +40,7 @@ const Footer = () => {
           <p className='text-5xl font-semibold w-full max-sm:leading-relaxed sm:w-1/2'>El secreto de un café rico es tomarselo entre <span className="comforter-brush-regular mt-1">amigos</span></p>
         </div>
         <ul className='text-white flex flex-col gap-3 justify-center'>
-            {list(false)}
+            {List(false)}
         </ul>
       </div>
       <hr className='w-full border-custom-gray border-t-2' />

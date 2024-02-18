@@ -24,40 +24,44 @@ const Contact = () => {
   const [modalContent, setModalContent] = useState(""); 
   const {modalOpen} = useModal();
 
-  const validateForm = () => {
+  const validateForm = (formData: any) => {
     const errors = {
-      name: form.current.from_name.value === "",
-      email: form.current.from_email.value === "",
-      tel: form.current.from_tel.value === "",
+      name: formData.from_name === "",
+      email: formData.from_email === "",
+      tel: formData.from_tel === "",
     };
   
     setFormErrors(errors);
   
     return Object.values(errors).every((error) => !error);
   };
-  
   const onChange = () => {
     setIsChecked(!isChecked);
   };
-
-  const handleSubmit = async (e:any) => {
-    setLoading(true);
-
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    if (!validateForm()) {
+    const formData = new FormData(e.currentTarget);
+    const formValues = Object.fromEntries(formData.entries());
+  
+    setLoading(true);
+  
+    if (!validateForm(formValues)) {
+      setLoading(false);
       return;
     }
+  
     try {
-      await sendEmail(form.current);
+      await sendEmail(formValues);
       setModalContent("¡Gracias por contactarnos! te responderemos lo antes posible.");
     } catch (error) {
       console.log("Error sending email: ", error);
       setModalContent("¡Uy! parece que hubo un problema, intentálo de nuevo más tarde.");
     }
-    modalOpen()
-    e.target.reset();
+    modalOpen();
+    e.currentTarget.reset();
     setLoading(false);
-};
+  };
+  
 
 
   return (

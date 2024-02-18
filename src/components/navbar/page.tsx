@@ -1,28 +1,9 @@
 "use client"
-import menu from "@/json/menu.json";
 import Image from "next/image";
-import Link from "next/link";
 import { motion } from "framer-motion";
-import ScrollLink from "../scroll-smooth/page";
 import Burger from "../burger/page";
 import { useEffect, useState } from "react";
-
-
-export const list = (isTop: boolean) => {
-    // eslint-disable-next-line react-hooks/rules-of-hooks
-    const [selectedItem, setSelectedItem] = useState(menu[0].title);
-    if (isTop) {
-        return [menu[0], menu[7]].map((item, i) => (
-            <li key={i} className={item.title === selectedItem ? 'text-yellow-600' : 'text-gray-400'}>
-                <Link href={item.href} onClick={() => setSelectedItem(item.title)}>{item.title}</Link>
-            </li>
-        ));
-    } else {
-        return menu.map((item, i) => (
-            <li key={i}><ScrollLink href={item.href}>{item.title}</ScrollLink></li>
-        ));
-    }
-};
+import List from "./list";
 
 const Navbar = () => {
     const [barIcon, setBarIcon] = useState(false);
@@ -67,11 +48,11 @@ const Navbar = () => {
                 </figure>
                 {barIcon ? (
                     <Burger>
-                        {list(true)}
+                        {List(true)}
                     </Burger>
                 ) : (
                     <ul className="hidden sm:flex gap-4 z-20 relative text-sm">
-                        {list(true)}
+                        {List(true)}
                     </ul>
                 )}
                 
