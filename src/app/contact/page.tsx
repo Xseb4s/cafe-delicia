@@ -14,7 +14,7 @@ import { CircularProgress } from "@mui/material";
 const defaultPosition: [number, number] = [3.457794, -76.535467];
 const Contact = () => {
   const [loading, setLoading] = useState(false);
-  const form = useRef();
+  const form = useRef<HTMLFormElement>(null);
   const [formErrors, setFormErrors] = useState({
     name: false,
     email: false,
