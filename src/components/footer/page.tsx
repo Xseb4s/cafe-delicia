@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image';
-import List from '../navbar/list';
+import List from '../navbar/list/page';
 import { FaFacebook, FaInstagram, FaLinkedin, FaSpotify } from "react-icons/fa";
 import { BsTwitterX } from "react-icons/bs";
 import Link from 'next/link';

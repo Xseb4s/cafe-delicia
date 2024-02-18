@@ -3,7 +3,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import Burger from "../burger/page";
 import { useEffect, useState } from "react";
-import List from "./list";
+import List from "./list/page";
 
 const Navbar = () => {
     const [barIcon, setBarIcon] = useState(false);
