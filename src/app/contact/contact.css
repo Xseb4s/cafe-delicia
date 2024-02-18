@@ -1,0 +1,10 @@
+.map-size{
+    width: 600px;
+    height: 600px;
+}
+@media (max-width:1250px) {
+    .map-size{
+        width: 450px;
+        height: 450px;
+    }
+}

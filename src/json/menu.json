@@ -1,0 +1,10 @@
+[
+    { "title":"Inicio", "href":"/" },
+    { "title":"Nosotros", "href":"#nosotros" },
+    { "title":"Café", "href":"#servicios" },
+    { "title":"Panadería", "href":"#servicios" },
+    { "title":"Bristo", "href":"#servicios" },
+    { "title":"Testimonios", "href":"#testimonios" },
+    { "title":"Historia", "href":"#historia" },
+    { "title":"Contacto", "href":"/contact" }
+]

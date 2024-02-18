@@ -1,0 +1,6 @@
+[
+    { "title":"Carlos Alvarado", "desc":"El equipo de Café Delicia es amable y atento. Siempre hacen que mi visita sea una experiencia agradable y relajante.", "urlImg":"Carlos", "user":"@Carlos58", "stars":4 },
+    { "title":"Evelyn Ivanova", "desc":"Café Delicia ofrece una variedad de opciones deliciosas para acompañar tu café. ¡Sus pasteles son una delicia!", "urlImg":"Evelyn", "user":"@Plyna", "stars":5 },
+    { "title":"Juan Monteiro", "desc":"Me encanta la atención al cliente en Café Delicia. Siempre te reciben con una sonrisa y te hacen sentir como en casa.", "urlImg":"Juan", "user":"@Mont32", "stars":4 },
+    { "title":"Maria du Plessis", "desc":"¡Excelente café y ambiente acogedor en Café Delicia! Siempre es un placer empezar mi día con una taza de su delicioso café.", "urlImg":"Maria", "user":"@Sis_d3", "stars":5 }
+]
