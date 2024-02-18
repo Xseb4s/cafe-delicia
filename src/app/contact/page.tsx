@@ -42,23 +42,24 @@ const Contact = () => {
     e.preventDefault();
     const formData = new FormData(e.currentTarget);
     const formValues = Object.fromEntries(formData.entries());
-  
+    const formToSend = (e.currentTarget);
+
     setLoading(true);
   
     if (!validateForm(formValues)) {
       setLoading(false);
       return;
     }
-  
+
     try {
-      await sendEmail(formValues);
+      await sendEmail(formToSend);
       setModalContent("¡Gracias por contactarnos! te responderemos lo antes posible.");
     } catch (error) {
       console.log("Error sending email: ", error);
       setModalContent("¡Uy! parece que hubo un problema, intentálo de nuevo más tarde.");
     }
     modalOpen();
-    e.currentTarget.reset();
+    formToSend.reset();
     setLoading(false);
   };
   
